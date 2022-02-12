@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{EBDD8410-473D-43D2-BF9C-7A4136C10924}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>final_system</RootNamespace>
+    <AssemblyName>final_system</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enrollment_Form.cs" />
+    <Compile Include="Enrollment_Form.Designer.cs">
+      <DependentUpon>Enrollment_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enrollment_Form_Page_Four.cs" />
+    <Compile Include="Enrollment_Form_Page_Four.Designer.cs">
+      <DependentUpon>Enrollment_Form_Page_Four.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enrollment_Form_Page_Three.cs" />
+    <Compile Include="Enrollment_Form_Page_Three.Designer.cs">
+      <DependentUpon>Enrollment_Form_Page_Three.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enrollment_Form_Page_two.cs" />
+    <Compile Include="Enrollment_Form_Page_two.Designer.cs">
+      <DependentUpon>Enrollment_Form_Page_two.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs" />
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Control.cs" />
+    <Compile Include="Menu_Control.Designer.cs">
+      <DependentUpon>Menu_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Enrollment_Form.resx">
+      <DependentUpon>Enrollment_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enrollment_Form_Page_Four.resx">
+      <DependentUpon>Enrollment_Form_Page_Four.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enrollment_Form_Page_Three.resx">
+      <DependentUpon>Enrollment_Form_Page_Three.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enrollment_Form_Page_two.resx">
+      <DependentUpon>Enrollment_Form_Page_two.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Control.resx">
+      <DependentUpon>Menu_Control.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
